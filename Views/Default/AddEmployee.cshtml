@@ -1,0 +1,36 @@
+﻿@model MVC_Validation_Oct.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddEmployee</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>@Html.Label("Enter Name of Employee")</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                    <td>@Html.ValidationMessageFor(x => x.Name)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Salary")</td>
+                    <td>@Html.TextBoxFor(x => x.Salary)</td>
+                    <td>@Html.ValidationMessageFor(x => x.Salary)</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="submit" value="Add employee" /></td>
+                    
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>

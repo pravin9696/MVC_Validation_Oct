@@ -1,0 +1,41 @@
+﻿@model MVC_Validation_Oct.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudent</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>@Html.Label("Enter Roll number")</td>
+                    <td>@Html.TextBoxFor(x => x.Roll)</td>
+                    <td>@Html.ValidationMessageFor(x => x.Roll)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Student Name")</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                    <td>@Html.ValidationMessageFor(x => x.Name)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Total Marks")</td>
+                    <td>@Html.TextBoxFor(x => x.TotalMarks)</td>
+                    <td>@Html.ValidationMessageFor(x => x.TotalMarks)</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="submit" value="Add employee" /></td>
+
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
