@@ -46,6 +46,8 @@ namespace MVC_Validation_Oct.Controllers
         // client side validation
         public ActionResult AddStudent(Student std)
         {
+            
+
             if (ModelState.IsValid)
             {
                 return RedirectToAction("Index");

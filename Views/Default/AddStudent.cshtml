@@ -31,6 +31,26 @@
                     <td>@Html.ValidationMessageFor(x => x.TotalMarks)</td>
                 </tr>
                 <tr>
+                    <td>@Html.Label("Enter Password")</td>
+                    <td>@Html.TextBoxFor(x => x.Password)</td>
+                    <td>@Html.ValidationMessageFor(x => x.Password)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Re Enter Password")</td>
+                    <td>@Html.TextBoxFor(x => x.RePassword)</td>
+                    <td>@Html.ValidationMessageFor(x => x.RePassword)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Email")</td>
+                    <td>@Html.TextBoxFor(x => x.email)</td>
+                    <td>@Html.ValidationMessageFor(x => x.email)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Date of Birth")</td>
+                    <td>@Html.EditorFor(x => x.DOB)</td>
+                    <td>@Html.ValidationMessageFor(x => x.DOB)</td>
+                </tr>
+                <tr>
                     <td colspan="3"><input type="submit" value="Add employee" /></td>
 
                 </tr>
