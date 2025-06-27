@@ -51,6 +51,16 @@
                     <td>@Html.ValidationMessageFor(x => x.DOB)</td>
                 </tr>
                 <tr>
+                    <td>@Html.Label("Enter Contact 1")</td>
+                    <td>@Html.EditorFor(x => x.contact1)</td>
+                    <td>@Html.ValidationMessageFor(x => x.contact1)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Contact 2")</td>
+                    <td>@Html.EditorFor(x => x.contact2)</td>
+                    <td>@Html.ValidationMessageFor(x => x.contact2)</td>
+                </tr>
+                <tr>
                     <td colspan="3"><input type="submit" value="Add employee" /></td>
 
                 </tr>

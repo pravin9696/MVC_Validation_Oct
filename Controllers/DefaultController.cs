@@ -45,8 +45,7 @@ namespace MVC_Validation_Oct.Controllers
         [HttpPost]
         // client side validation
         public ActionResult AddStudent(Student std)
-        {
-            
+        {            
 
             if (ModelState.IsValid)
             {
@@ -54,5 +53,21 @@ namespace MVC_Validation_Oct.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public ActionResult Feedback()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Feedback(StudentFeedback sf)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        
     }
 }

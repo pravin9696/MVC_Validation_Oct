@@ -1,0 +1,40 @@
+﻿@model MVC_Validation_Oct.Models.StudentFeedback
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Feedback</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>Enter Name</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                    <td>
+                        @Html.ValidationMessageFor(x => x.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Feedback</td>
+                    <td>@Html.TextAreaFor(x => x.message)</td>
+                    <td>
+                        @Html.ValidationMessageFor(x => x.message)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="submit"value="Submit" /></td>
+                    
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>

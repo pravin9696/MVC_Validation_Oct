@@ -13,6 +13,7 @@ namespace MVC_Validation_Oct.Models
         [Required(ErrorMessage ="Name of student is required!!!")]
         public int Roll { get; set; }//required
         [Required( ErrorMessage ="Enter Name",AllowEmptyStrings =true)]
+        [CheckName]
         public String Name { get; set; }//required
         [Required()]
         [Range(0,500,ErrorMessage ="Enter Total marks between 0 to 500 only")]
@@ -31,6 +32,13 @@ namespace MVC_Validation_Oct.Models
         [Required]
         
         public String email { get; set; }
+
+        [Required]
+        public String contact1 { get; set; }
+
+        [Required]
+        [DifferentContactValidator]
+        public String contact2 { get; set; } //contact2 must be different from contact1
 
         [DataType(DataType.Date)]
         public DateTime DOB { get; set; }

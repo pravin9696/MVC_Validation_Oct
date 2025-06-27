@@ -97,7 +97,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CheckName.cs" />
+    <Compile Include="Models\DifferentContactValidator.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\StudentFeedback.cs" />
+    <Compile Include="Models\myValidation.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +111,7 @@
     <Content Include="Views\Default\AddEmployee.cshtml" />
     <Content Include="Views\Default\AddStudent.cshtml" />
     <Content Include="PPT\6 Validation in MVC5.pptx" />
+    <Content Include="Views\Default\Feedback.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
